@@ -1,0 +1,80 @@
+:root {
+  --primary-color: rgb(49, 236, 166);
+  --primary-color-v2: rgba(49, 236, 166, 0.2);
+  --primary-color-dark: rgb(50, 211, 152);
+  --secondary-color: rgb(196, 123, 255);
+  --secondary-color-v2: rgba(196, 123, 255, 0.2);
+  --bg-color-dark: rgb(33, 32, 39);
+  --bg-color-light: rgb(236, 236, 236);
+  --text-color-dark: rgb(41, 41, 41);
+  --text-color-light: rgb(230, 230, 230);
+  --btn-shadow: rgba(33, 32, 39, 0.15);
+  --overlay: rgba(0, 0, 0, 0.4);
+}
+::selection {
+  background-color: var(--primary-color-v2);
+}
+#app {
+  position: relative;
+  font-family: inherit;
+  background-color: var(--bg-color-light);
+  color: var(--text-color-dark);
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@keyframes showPageAnimate {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.page {
+  animation: showPageAnimate ease 0.5s forwards;
+}
+input {
+  display: inline-block;
+  border-radius: 20px;
+  box-shadow: 2px 0px 20px rgba(0, 0, 0, 0.2);
+  padding: 0.6rem 1rem;
+  caret-color: var(--text-color-dark);
+}
+.primary-btn {
+  display: inline-block;
+  padding: 0.6rem 2rem;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px var(--btn-shadow);
+  font-size: 0.8rem;
+  font-weight: 600;
+  border: 2px solid var(--primary-color);
+  background-color: var(--primary-color-light);
+  color: var(--text-color-light);
+  transition: all ease 0.4s;
+}
+.primary-btn:hover {
+  background-color: var(--primary-color);
+}
+.accept-btn {
+  display: inline-block;
+  padding: 0.6rem 2rem;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px var(--btn-shadow);
+  font-size: 0.8rem;
+  font-weight: 600;
+  transition: all ease 0.4s;
+  background-color: var(--primary-color);
+  color: var(--text-color-dark);
+}
+.accept-btn:hover {
+  background-color: var(--primary-color-dark);
+}
+.primary-highlight {
+  color: var(--primary-color);
+}
+.secondary-highlight {
+  color: var(--secondary-color);
+}
